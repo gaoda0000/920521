@@ -6,8 +6,9 @@ targets:
     type: application
     platform: iOS
     deploymentTarget: "14.0"
-    sources: [CampusWall]
+    sources: 
+      - path: .        # 告诉它直接在根目录找代码
+        includes: ["*.swift", "*.storyboard"] # 只包含代码和界面文件
     settings:
       INFOPLIST_KEY_LSRequiresIPhoneOS: true
       INFOPLIST_KEY_UILaunchStoryboardName: LaunchScreen
-      
