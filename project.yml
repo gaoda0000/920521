@@ -6,9 +6,9 @@ targets:
     type: application
     platform: iOS
     deploymentTarget: "14.0"
-    sources: 
-      - path: .        # 告诉它直接在根目录找代码
-        includes: ["*.swift", "*.storyboard"] # 只包含代码和界面文件
+    sources:
+      - path: .
+        includes: ["*.swift", "*.storyboard", "Info.plist"] # 显式包含 Info.plist
     settings:
-      INFOPLIST_KEY_LSRequiresIPhoneOS: true
-      INFOPLIST_KEY_UILaunchStoryboardName: LaunchScreen
+      GENERATE_INFOPLIST_FILE: NO # 告诉 Xcode 我们自己提供 Info.plist
+      INFOPLIST_FILE: Info.plist
